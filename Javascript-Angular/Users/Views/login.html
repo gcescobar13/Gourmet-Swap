@@ -1,0 +1,70 @@
+﻿<!-- Content Login Wrap Starts -->
+<div class="content-login-wrap">
+    <!-- Nested Row Starts -->
+    <div class="row">
+        <!-- Login Col Starts -->
+        <div class="col-md-5 col-xs-12">
+            <h4 class="text-spl-color">Returning Customer/Chef</h4>
+            <!-- Login Form Starts -->
+            <form name="loginVm.loginForm" novalidate>
+                <div class="form-group" ng-class="{'has-error': loginVm.hasValidationError('email')}">
+                    <label for="login-email">Email address</label>
+                    <input type="email" name="email" class="form-control" id="login-email" placeholder="Email" ng-model="loginVm.loginContent.email" required>
+                    <span ng-show="loginVm.showErrorMessage('email','required') && loginVm.showValidationErrors('email')" class="help-block">Email is required</span>
+                </div>
+                <div class="form-group" ng-class="{'has-error': loginVm.hasValidationError('password')}">
+                    <label for="login-password">Password</label>
+                    <input type="password" name="password" class="form-control" id="login-password" placeholder="Password" ng-model="loginVm.loginContent.password" required>
+                    <span ng-show="loginVm.showErrorMessage('password','required') && loginVm.showValidationErrors('password')" class="help-block">Password is required</span>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox"> Remember me
+                    </label>
+                </div>
+                <button type="submit" class="btn btn-block btn-secondary animation" ng-click="loginVm.onLoginClicked()" ng-enabled="loginVm.loginForm.$dirty">
+                    Login <i class="fa fa-caret-right"></i>
+                </button>
+                <div class="form-group">
+                    <p class="help-block">Forgot your Password? <a ui-sref="pub.forgotPassword">Click here</a></p>
+                </div>
+            </form>
+            <!-- Login Form Ends -->
+        </div>
+        <!-- Login Col Ends -->
+        <!-- Divider For Small Devices -->
+        <div class="col-xs-12 visible-sm visible-xs">
+            <br><hr><br>
+        </div>
+        <!-- Divider For Small Ends -->
+        <!-- Register Col Starts -->
+        <div class="col-md-5 col-xs-12 col-md-offset-2">
+            <h4 class="text-spl-color">Login for first time user?</h4>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard..</p>
+
+            <a href="#" class="btn btn-block btn-secondary animation" ng-click="loginVm.registerNewSwapper()">New Swapper <i class="fa fa-caret-right"></i></a>
+            <hr>
+
+            <a href="#" class="btn btn-block btn-tertiary animation" ng-click="loginVm.registerNewCook()">Apply to Cook <i class="fa fa-caret-right"></i></a>
+        </div>
+        <!-- Register Col Ends -->
+    </div>
+    <!-- Nested Row Ends -->
+</div>
+<!-- Banners Starts -->
+<div class="row">
+    <div class="col-xs-3">
+        <img ng-src="/Content/images/banners/banner-img1.png" alt="Banner 1" class="img-responsive" />
+    </div>
+    <div class="col-xs-3">
+        <img ng-src="/Content/images/banners/banner-img2.png" alt="Banner 2" class="img-responsive" />
+    </div>
+    <div class="col-xs-3">
+        <img ng-src="/Content/images/banners/banner-img3.png" alt="Banner 3" class="img-responsive" />
+    </div>
+    <div class="col-xs-3">
+        <img ng-src="/Content/images/banners/banner-img1.png" alt="Banner 4" class="img-responsive" />
+    </div>
+ </div>
+<!-- Banners Ends -->
+<!-- Content Login Wrap Ends -->

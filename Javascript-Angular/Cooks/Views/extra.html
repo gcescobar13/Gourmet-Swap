@@ -1,0 +1,62 @@
+﻿<div class="col-md-offset-1 col-md-10">
+    <h4 class="text-spl-color">Extra</h4>
+
+    <p class="text-left">Anything else you would like to tell us?</p>
+    <form name="extraVm.extraForm" novalidate>
+        <div class="form-group text-left" ng-class="{'has-error' : extraVm.hasValidationError('additional')}">
+
+            <label class="sr-only" for="register-lname"></label>
+            <textarea class="form-control textarea80" id="register-cuisines" name="additional" placeholder="" rows="4" ng-model="extraVm.extraContent.additional" ng-maxlength="1000" required></textarea>
+            <div ng-show="extraVm.showValidationErrors('additional')">
+                <span class="help-block" ng-show="extraVm.showErrorMessage('additional','required')">Required. If none, please input 'N/A',</span>
+                <span class="help-block" ng-show="extraVm.showErrorMessage('additional','maxlength')">No more than 1000 characters.</span>
+            </div>
+        </div>
+
+        <p class="text-left">How did you hear about Gourmet Swap?</p>
+
+        <div class="text-left">
+
+            <span class="help-block" ng-show="extraVm.extraForm.optradiohear.$error.required">Please select on option below.</span>
+
+            <div>
+                <label>
+                    <input type="radio" name="optradiohear" ng-model="extraVm.extraContent.sourceTypeId" ng-value="1" ng-required="!extraVm.extraContent.sourceTypeId">From a Gourmet Swap Cook
+                    <input type="text" name="input1" class="form-control" id="register-zipcode" placeholder="Who?" ng-model="extraVm.input1" ng-checked="extraVm.getSource(extraVm.input1, extraVm.extraContent.sourceTypeId == 1)" ng-required="extraVm.extraContent.sourceTypeId == 1">
+                    <span class="help-block" ng-show="extraVm.extraContent.sourceTypeId == 1 && extraVm.extraForm.input1.$error.required">Required</span>
+                </label>
+            </div>
+            <div>
+                <label>
+                    <input type="radio" name="optradiohear" ng-model="extraVm.extraContent.sourceTypeId" ng-value="2" ng-required="!extraVm.extraContent.sourceTypeId">From a Gourmet Swap Costumer
+                    <input type="text" name="input2" class="form-control" id="register-zipcode" placeholder="Who?" ng-model="extraVm.input2" ng-checked="extraVm.getSource(extraVm.input2, extraVm.extraContent.sourceTypeId == 2)" ng-required="extraVm.extraContent.sourceTypeId == 2">
+                    <span class="help-block" ng-show="extraVm.extraContent.sourceTypeId == 2 && extraVm.extraForm.input2.$error.required">Required</span>
+                </label>
+            </div>
+            <div>
+                <label>
+                    <input type="radio" name="optradiohear" ng-model="extraVm.extraContent.sourceTypeId" ng-value="3" ng-required="!extraVm.extraContent.sourceTypeId">I read about you
+                    <input type="text" name="input3" class="form-control" id="register-zipcode" placeholder="Where did you read about us?" ng-model="extraVm.input3" ng-checked="extraVm.getSource(extraVm.input3, extraVm.extraContent.sourceTypeId == 3)" ng-required="extraVm.extraContent.sourceTypeId == 3">
+                    <span class="help-block" ng-show="extraVm.extraContent.sourceTypeId == 3 && extraVm.extraForm.input3.$error.required">Required</span>
+                </label>
+            </div>
+            <div>
+                <label>
+                    <input type="radio" name="optradiohear" ng-model="extraVm.extraContent.sourceTypeId" ng-value="4" ng-required="!extraVm.extraContent.sourceTypeId">Other
+                    <input type="text" name="input4" class="form-control" id="register-zipcode" placeholder="Where did you hear about us?" ng-model="extraVm.input4" ng-checked="extraVm.getSource(extraVm.input4, extraVm.extraContent.sourceTypeId == 4)" ng-required="extraVm.extraContent.sourceTypeId == 4">
+                    <span class="help-block" ng-show="extraVm.extraContent.sourceTypeId == 4 && extraVm.extraForm.input4.$error.required">Required</span>
+                </label>
+            </div>
+
+            <p>
+                Gourmet Swap requires all cooks to have their food handlers card. If you already have one please submit a copy to <a href="mailto:info@gourmetswap.com?subject=HandlersCard">info@gourmetswap.com</a>. If not, please click on the food handlers card website link <a href="https://www.servsafe.com/ss/catalog/FHCategories.aspx" target="_blanck">https://www.servsafe.com/ss/catalog/FHCategories.aspx</a>
+            </p>
+
+            <div class="col-xs-12 text-center">
+                <button class="btn btn-secondary btn-small" ng-enabled="extraVm.extraForm.$dirty" ng-click="extraVm.onSaveClicked()" type="submit">
+                    <i class="fa fa-floppy-o" aria-hidden="true"></i> Save
+                </button>
+            </div>
+        </div>
+    </form>
+</div>

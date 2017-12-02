@@ -1,0 +1,85 @@
+﻿<div class="col-md-12">
+    <div class="col-md-6 col-md-offset-3">
+        <div class="row">
+            <div id="registration">
+                <h4 class="text-spl-color">Register as a Chef</h4>
+                <form name="registerVm.registrationForm" class="form-vertical" novalidate>
+                    <div class="form-group" ng-class="{'has-error' : registerVm.hasValidationError('firstName')}">
+                        <label for="register-fname">First Name</label>
+                        <input type="text" class="form-control" name="firstName" id="register-fname" ng-model="registerVm.registerContent.firstName" placeholder="First Name" required ng-minlength="2">
+                        <div ng-show="registerVm.showValidationErrors('firstName')">
+                            <span class="help-block" ng-show="registerVm.showErrorMessage('firstName','required')">Name is required.</span>
+                            <span class="help-block" ng-show="registerVm.showErrorMessage('firstName','minlength')">Name must be at least 2 characters long.</span>
+                        </div>
+                    </div>
+                    <div class="form-group" ng-class="{'has-error' : registerVm.hasValidationError('lastName')}">
+                        <label for="lastName">Last Name</label>
+                        <input type="text" class="form-control" id="register-lname" placeholder="Last Name" name="lastName" ng-model="registerVm.registerContent.lastName" required ng-minlength="2">
+                        <div ng-show="registerVm.showValidationErrors('lastName')">
+                            <span class="help-block" ng-show="registerVm.showErrorMessage('lastName','required')">Last name is required.</span>
+                            <span class="help-block" ng-show="registerVm.showErrorMessage('lastName','minlength')">Name must be at least 2 characters long.</span>
+                        </div>
+                    </div>
+                    <div class="form-group" ng-class="{'has-error' : registerVm.hasValidationError('email')}">
+                        <label for="register-lname">E-mail Addres</label>
+                        <input type="email" class="form-control" id="register-email" placeholder="E-mail Address" name="email" ng-pattern="registerVm.emailFormat" ng-model="registerVm.registerContent.email" required>
+                        <div ng-show="registerVm.showValidationErrors('email')">
+                            <span class="help-block" ng-show="registerVm.showErrorMessage('email','required')">Email is required.</span>
+                            <span class="help-block" ng-show="registerVm.showErrorMessage('email','email') || registerVm.showErrorMessage ('email', 'pattern')">Email is invalid.</span>
+                        </div>
+                    </div>
+                    <div class="form-group" ng-class="{'has-error' : registerVm.hasValidationError('password')}">
+                        <label for="register-lname">Password</label>
+                        <input type="password" class="form-control" id="register-password" placeholder="Password" name="password" ng-model="registerVm.registerContent.password" ng-pattern="registerVm.passwordFormat" required>
+                        <div ng-show="registerVm.showValidationErrors('password')">
+                            <span class="help-block" ng-show="registerVm.showErrorMessage('password','required')">Password is required.</span>
+                            <span class="help-block" ng-show="registerVm.showErrorMessage('password', 'pattern')">
+                                Invalid password: password must me at least 6 characters and must include at least 1 number.
+                            </span>
+                        </div>
+                    </div>
+                    <div class="form-group" ng-class="{'has-error' : registerVm.hasValidationError('confirmPassword')}">
+                        <label for="confirmPassword">Confirm Password:</label>
+                        <input type="password" class="form-control" name="confirmPassword" ng-model="registerVm.registerContent.confirmPassword" placeholder="Enter Password Again Here..." required compare-to="registerVm.registerContent.password">
+                        <div ng-show="registerVm.showValidationErrors('confirmPassword')">
+                            <span class="help-block" ng-show="registerVm.showErrorMessage('confirmPassword','required')"> You need to confirm password</span>
+                            <span class="help-block" ng-show="registerVm.showErrorMessage('confirmPassword','compareTo')">
+                                Confirm password does not match the password above.
+                            </span>
+                        </div>
+                    </div>
+                    <div class="form-group" ng-class="{'has-error' : registerVm.hasValidationError('number')}">
+                        <label for="register-lname">Phone Number</label>
+                        <input type="text" class="form-control" id="register-fnumber" placeholder="Phone Number" name="number" ng-pattern="registerVm.numberFormat" ng-model="registerVm.registerContent.number" required>
+                        <div ng-show="registerVm.showValidationErrors('number')">
+                            <span class="help-block" ng-show="registerVm.showErrorMessage('number','required')">
+                                Phone number is required.
+                            </span>
+                            <span class="help-block" ng-show="registerVm.showErrorMessage('number', 'pattern')">
+                                Invalid phone number.
+                            </span>
+                        </div>
+                    </div>
+                    <div class="form-group" ng-class="{'has-error' : registerVm.hasValidationError('zipcode')}">
+                        <label for="register-lname">Zip Code</label>
+                        <input type="text" class="form-control" id="register-zipcode" placeholder="Zip Code" name="zipcode" ng-model="registerVm.registerContent.zipcode" ng-pattern="registerVm.zipcodeFormat" required>
+                        <div ng-show="registerVm.showValidationErrors('zipcode')">
+                            <span class="help-block" ng-show="registerVm.showErrorMessage('zipcode','required')">
+                                Zip code is required.
+                            </span>
+                            <span class="help-block" ng-show="registerVm.showErrorMessage('zipcode', 'pattern')">
+                                Invalid zip code.
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="btn-group">
+                        <button class="btn btn-secondary animation nextBtn pull-right" ng-enabled="registerVm.registationForm.$dirty" ng-click="registerVm.onRegisterCookBtnClicked()" type="submit">Next <i class="fa fa-chevron-right"></i></button>
+                    </div>
+
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

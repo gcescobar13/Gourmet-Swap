@@ -1,0 +1,115 @@
+﻿<div class="col-md-12">
+    <div>
+        <div ng-hide="messagesVm.hideList">
+            <h4 class="text-spl-color">Messages</h4>
+
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <td>Cook</td>
+                        <td>Name of Meal</td>
+                        <td>Message</td>
+                        <td></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="currentMessage in messagesVm.messages">
+                        <td>
+                            <div class="col-md-12">
+                                <ul class="list-unstyled list-inline grid-box-info-links pull-left-lg cook-profile-thumbnail" onclick="location.href='cook-page.html';">
+                                    <li class="" aria-hidden="true">
+                                        <i class="fa fa-user" style="font-size:30px;"></i>
+
+                                    </li>
+                                    <li class="pull-right">
+                                        <p class="cook-name">{{currentMessage.authorInfo.firstName}} {{currentMessage.authorInfo.lastName}}</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td>{{currentMessage.title}}</td>
+                        <td><span class="cursor-P" data-toggle="modal" data-target="#newmessagemodal" color: #cf3d27; font-weight: bold;">{{currentMessage.comment}}</span></td>
+                        <td>
+                            <ul class="list-unstyled list-inline text-center-sm text-center-xs">
+                                <!--<li>
+                                    <button class="btn btn-secondary animation btn-table" data-toggle="modal" data-target="#excludemessageModal"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+                                </li>-->
+                                <li>
+                                    <button type="button" class="btn" style="background-color:#cf3d27" ng-click="messagesVm.replyBtnClick(currentMessage)"><i class="fa fa-reply" style="color:white;"></i></button>
+                                </li>
+                                <hr />
+                                <li>
+                                    <button class="btn" style="background-color:#cf3d27"><i class="fa fa-trash-o" style="color:white;"></i></button>
+                                </li>
+
+                            </ul>
+                        </td>
+                    </tr>
+                    <!--<tr>
+                        <td>
+                            <div class="col-md-12">
+                                <ul class="list-unstyled list-inline grid-box-info-links pull-left-lg cook-profile-thumbnail" onclick="location.href='cook-page.html';">
+                                    <li>
+                                        <span class="cook-picture"><img src="../../images/profiles/harold.jpg" class="img-circle"></span>
+                                    </li>
+                                    <li>
+                                        <span class="cook-name">Harold Jabar</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td>Teryaki Chicken</td>
+                        <td><span class="" data-toggle="modal" data-target="#newmessagemodal" style="cursor: pointer; color: #cf3d27; font-weight: bold;">Thank you s much!</span></td>
+                        <td>
+                            <ul class="list-unstyled list-inline text-center-sm text-center-xs">
+                                <li>
+                                    <button class="btn btn-secondary animation btn-table" data-toggle="modal" data-target="#excludemessageModal"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="col-md-12">
+                                <ul class="list-unstyled list-inline grid-box-info-links pull-left-lg cook-profile-thumbnail" onclick="location.href='cook-page.html';">
+                                    <li>
+                                        <span class="cook-picture"><img src="../../images/profiles/sophia.jpg" class="img-circle"></span>
+                                    </li>
+                                    <li>
+                                        <span class="cook-name">Sophia Biachi</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td>Teryaki Chicken</td>
+                        <td><span class="" data-toggle="modal" data-target="#newmessagemodal" style="cursor: pointer; color: #cf3d27; font-weight: bold;">I didn't like you food...</span></td>
+                        <td>
+                            <ul class="list-unstyled list-inline text-center-sm text-center-xs">
+                                <li>
+                                    <button class="btn btn-secondary animation btn-table" data-toggle="modal" data-target="#excludemessageModal"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>-->
+                </tbody>
+
+            </table>
+        </div>
+        <form action="#" ng-hide="messagesVm.hideForm">
+            <h2 class="text-spl-color">Reply</h2>
+            <div class="form-group">
+                <label class="sr-only" for="Title">Title</label>
+                <input ng-model="messagesVm.pvtReplyData.title" type="text" class="form-control flat" id="messageme-name" placeholder="Subject">
+            </div>
+
+            <div class="form-group">
+                <label class="sr-only" for="messageme-info">Your Information</label>
+                <textarea ng-model="messagesVm.pvtReplyData.comment" class="form-control flat" id="messageme-info" placeholder="Your Information" rows="5"></textarea>
+            </div>
+            <div class="clearfix">
+                <button ng-click="messagesVm.submitReply()" type="button" class="btn btn-secondary text-uppercase animation pull-right">Submit</button>
+            </div>
+        </form>
+
+    </div>
+</div>

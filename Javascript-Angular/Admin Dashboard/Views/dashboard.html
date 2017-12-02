@@ -1,0 +1,71 @@
+﻿
+<div class="row">
+    <!-- begin col-4 -->
+    <!-- end col-4 -->
+    <!-- begin col-4 -->
+
+    <div class="col-md-12">
+        <!-- begin panel -->
+        
+        <div class="panel panel-inverse" data-sortable-id="index-4">
+            <div class="panel-heading">
+                <div class="panel-title" style="font-size:22px;">
+                    Registered Users
+                    <div class="pull-right btn-group m-r-5 m-b-5" style="margin-left:10px;">
+                        <a href="javascript:;" class="btn btn-success">Sort By</a>
+                        <a href="javascript:;" data-toggle="dropdown" class="btn btn-success dropdown-toggle" aria-expanded="false">
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu pull-right">
+                            <li ng-repeat="sort in dashAdminCtrl.sortingOptions">
+                                <a href="javascript:;" ng-click="dashAdminCtrl.onSortClicked(sort.id)">{{sort.sortType}}</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="pull-right btn-group m-b-5" style="margin-left:10px;">
+                        <a href="javascript:;" class="btn btn-warning">Roles</a>
+                        <a href="javascript:;" data-toggle="dropdown" class="btn btn-warning dropdown-toggle">
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu pull-right">
+                            <li ng-repeat="roleType in dashAdminCtrl.roleOptions">
+                                <a href="javascript:;" ng-click="dashAdminCtrl.onRoleClicked(roleType.id)">{{roleType.role}}</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <ul class="registered-users-list clearfix">
+                <li load-toggle ng-repeat="currentUser in dashAdminCtrl.pagedList.pagedItems | filter: search:strict" style="margin:auto; text-align:center">
+                    <a href="javascript:;"><img src="/Theme/admin/admin/assets/img/user-2.jpg" alt="" class="rounded-corner" /></a>
+                    <h4 class="">
+                        {{currentUser.firstName + " " + currentUser.lastName}}
+                    </h4>
+                    <h5>{{currentUser.email}}</h5>
+                    <p>
+                        <strong>
+                            <span ng-repeat="userRoles in currentUser.roles track by $index">
+                                {{userRoles}} {{$last ? '' : ($index==userRoles.length-2) ? ' and ' : ', '}}
+                            </span>
+                        </strong>
+                    </p>
+                    <div>
+                        <button href="javascript:;" class="btn btn-sm btn-warning m-r-5" style="height:28px;">View Profile</button>
+                        <input on-toggle is-disabled="currentUser.disabled"  user-id="currentUser.id" class="buttonSwitch btn btn-sm" type="checkbox" checked data-toggle="toggle" data-on="Active" data-off="Inactive" data-onstyle="success" data-offstyle="danger"  data-size="small"/>
+                    </div>
+
+                </li>
+            </ul>
+            <div class="panel-footer text-center">
+                <div uib-pagination total-items="dashAdminCtrl.pagedList.totalCount" ng-model="dashAdminCtrl.paginationSettings.pageNum" class="pagination-sm" items-per-page="dashAdminCtrl.paginationSettings.pageSize" boundary-links="true" max-size="5" force-ellipses="true" ng-change="dashAdminCtrl.onChangeGetUsers()"></div>
+                <select style="margin-top: 6px;" ng-model="dashAdminCtrl.paginationSettings.pageSize" ng-change="dashAdminCtrl.onChangeGetUsers()" ng-options="pageSize as pageSize + ' / page' for pageSize in dashAdminCtrl.itemsPerPageOptions"></select>
+            </div>
+        </div>
+        <!-- end panel -->
+    </div>
+
+
+
+    <!-- end row -->
+</div>
+<!-- end #content -->

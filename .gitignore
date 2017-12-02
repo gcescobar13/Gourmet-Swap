@@ -3,6 +3,10 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
+# To force user interaction with the merging of this file
+*.csproj merge=binary
+dest/
+
 # User-specific files
 *.suo
 *.user

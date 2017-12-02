@@ -1,0 +1,38 @@
+﻿<div class="col-md-offset-1 col-md-10">
+    <h4 class="text-spl-color">Community</h4>
+    <p class="text-left">Tell us about your community!</p>
+
+    <p class="text-left">If you needed to get 10 people over to eat your food tomorrow night. How would you reach out to your potential customers? (Explain in 250 characters)</p>
+    <form name="commVm.communityForm" novalidate>
+        <div class="form-group text-left" ng-class="{'has-error' : commVm.hasValidationError('pitch')}">
+
+            <label class="sr-only" for="register-lname"></label>
+            <textarea ng-model="commVm.communityContent.pitch" name="pitch" class="form-control textarea80" id="register-cuisines" placeholder="" rows="4" ng-minlength="5" ng-maxlength="250" required></textarea>
+            <div ng-show="commVm.showValidationErrors('pitch')">
+                <span class="help-block" ng-show="commVm.showErrorMessage('pitch','required')">Required.</span>
+                <span class="help-block" ng-show="commVm.showErrorMessage('pitch','minlength')">Must be at least 5 characters long.</span>
+                <span class="help-block" ng-show="commVm.showErrorMessage('pitch','maxlength')">No more than 250 characters.</span>
+            </div>
+
+        </div>
+        <p class="text-left">Given your schedule, how much time would you be able to spend on Gourmet Swap each week? You will be booked based off your experience and how many hours you put in.</p>
+
+        <div class="form-group text-left" ng-class="{'has-error' : commVm.hasValidationError('timecommitment')}">
+
+            <select class="form-control example-single" ng-model="commVm.communityContent.timeCommitmentId" name="timecommitment" required>
+                <option ng-value="1">0-3 hours per week</option>
+                <option ng-value="2">4-6 hours per week</option>
+                <option ng-value="3">7-9 hours per week</option>
+                <option ng-value="4">10+ hours per week</option>
+                <option ng-value="5" selected="selected">Not Sure</option>
+            </select>
+            <div ng-show="commVm.showValidationErrors('timecommitment')">
+                <span class="help-block" ng-show="commVm.showErrorMessage('timecommitment','required')">Required.</span>
+            </div>
+        </div>
+        <div class="col-xs-12 text-center">
+            <button class="btn btn-secondary btn-small" ng-enabled="commVm.communityForm.$dirty" ng-click="commVm.onSaveClicked()" type="submit"><i class="fa fa-floppy-o" style="align-content: center"></i>Save
+            </button>
+        </div>
+    </form>
+</div>

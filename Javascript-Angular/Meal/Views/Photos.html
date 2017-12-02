@@ -1,0 +1,35 @@
+<!--The "photos" section of posting a meal-->
+
+
+<div class="tab-pane" id="tabphotos">
+    <h4 ng-show="photoCtrl.pageError == true" class="text-spl-color">{{photoCtrl.errorMessage}}</h4>
+    <div ng-hide="photoCtrl.pageError == true">
+        <div id="gallery" ng-show="!photoCtrl.uploadMode">
+            <h4 class="text-spl-color">4. Meal Photos</h4>
+            <h6>Check out you meal photos below.</h6>
+            <p>If you are selling addotional items, make sure to add more photos</p>
+            <p>Too add more photos to this meal, click here: <button ng-click="photoCtrl.goToUpdateMode()" class="btn btn-danger">Upload</button></p>
+            <div class="row list-unstyled gallery-grid" magnific-popup-gallery>
+                <div class="col-sm-4 col-xs-6" ng-repeat="currentPhoto in photoCtrl.photos | limitTo: totalDisplayed" loading execute-timeout-func="photoCtrl.fireTimeout()">
+                    <div class="hover-content meal-container">
+                        <div class="photos" ng-style="{'background-image': 'url(' + currentPhoto.fileName + ')'}">
+                            <div class="overlay animation">
+                                <a href="{{currentPhoto.fileName}}" class="btn btn-link zoom image"><i class="fa fa-search-plus"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div ng-show="photoCtrl.uploadMode">
+            <h4 class="text-spl-color">4. Upload Photos</h4>
+            <h6>Add at least one Photo fo your Meal</h6>
+            <p>If you are selling addotional items, make sure to add more photos</p>
+            <div>
+                <label class="control-label">Select File</label>
+                <input id="multiupload" on-upload-success name="multiupload[]" type="file" class="file-loading" multiple meal-id="photoCtrl.mealId"
+                       execute-func-on-success="photoCtrl.getAllMealPhotos()">
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,13 @@
+﻿<style>
+    
+    #right-panel {
+        font-family: 'Roboto','sans-serif';
+    }
+</style>
+
+<div class="row">
+    <div get-directions btn-handler="mealSearchResultMapCtlr.onDisplayRoute(lat,lng)" id="map" class="col-md-9 col-sm-8 col-xs-12" style="height: 552px"></div>
+    <div class="col-md-3" id="right-panel" ng-show="mealSearchResultMapCtlr.showRemoveRouteBtn" style="overflow-y: scroll; height: 552px;">
+        <button class="btn btn-danger btn-xs" ng-click="mealSearchResultMapCtlr.onRemoveRouteClicked()">Remove Route</button>
+    </div>
+</div>
