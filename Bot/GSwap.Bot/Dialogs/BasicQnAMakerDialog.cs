@@ -28,7 +28,7 @@ using GSwap.Models.Bot.Domain;
 namespace Microsoft.Bot.Sample.QnABot
 {
     // For more information about this template visit http://aka.ms/azurebots-csharp-qnamaker
-    //[LuisModel("c446f04c-fc34-40d9-8853-3947206e7e91", "7c9c6106d0144f42b132891ae3749be2")]
+    //[LuisModel("*LUIS KEY HERE*", "*LUIS PASSWORD HERE*")]
     [Serializable]
     [BotAuthentication]
     public partial class BasicQnAMakerDialog : LuisDialog<object>
