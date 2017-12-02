@@ -41,8 +41,8 @@ namespace Microsoft.Bot.Sample.QnABot
             {
                 if (activity.GetActivityType() == ActivityTypes.Message)
                 {
-                    string appdId = "676cba6b-7b84-4a55-bb51-a29f0297fcfc";
-                    string appPassword = "h4MtawqcbMjfc9cg0eWnJQq";
+                    string appdId = "*APP ID HERE*";
+                    string appPassword = "*APP PASSWORD HERE*";
 
 
                     ConnectorClient connector = new ConnectorClient(new Uri(activity.ServiceUrl), appdId, appPassword);
