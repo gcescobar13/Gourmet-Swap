@@ -1,5 +1,5 @@
-# Full Stack Web Development
-Personal contributions to Gourmet Swap, a social market built off the idea connecting communities to home-cooked meals prepared by local Chefs. Example codes include the following technologies: ASP.NET MVC / C#, REST Web API, Angular, Javascript, HTML, CSS.
+# Full Stack .NET Developer
+Personal contributions to Gourmet Swap, a social market built off the idea connecting communities to home-cooked meals prepared by local Chefs. Example codes include the following technologies: C# / ASP.NET MVC, REST Web API, Angular, Javascript, HTML, CSS.
 
 Web Application:
 1) is a Single Page Application (SPA) - using ASP.NET Web API and AngularJS.
