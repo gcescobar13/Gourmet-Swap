@@ -4,4 +4,4 @@ Personally launched an intelligent chat bot to enhance and improve users interac
 
 Code is written in C# / ASP.NET using Microsoft's Cognitive Services (Language Understanding Intelligent Service aka LUIS) and Bot Framework were used.
 
-Under GSwap.Bot/Controllers the Messages Controller can be located. This controller launches the Dialog service. The Dialog service can be found under Swap.Bot/Dialogs.
+Under GSwap.Bot/Controllers the Messages Controller can be located. This controller captures user information - message, user name, message provider, etc.. - then it launches the the Dialog service. The 'BasicQnAMakerDialog' dialogs can be found under GSwap.Bot/Dialogs.
