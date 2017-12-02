@@ -1,4 +1,3 @@
-## Chat Bot 
-Personally launched an intelligent chat bot to ehannce and improve users interactions and meal searches. Designed conversations to support freeform and more guided interactions through simple text to complex rich cards that contain text, images, and action buttons.
+## Chat Bot for Gourmet Swap
 
-Microsoft's Cognitive Services and Bot Framework were used.
+Please refer to Controllers/MessagesController.cs  and  Dialogs/BasicQnAMakerDialog.cs to check out the bulk of my code.
