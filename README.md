@@ -9,3 +9,5 @@ Web Application:
 5) server side enforces the dependency injection (DI) design pattern to promote a loosely coupled application. Unity container used to resolve dependencies. 
 6) uses ASP.NET Web API and ADO.NET to create REST based services (Web APIs) 
 7) uses AngularJS Controllers / Services to request data from the Web APIs to serve data to AngularJS Views 
+
+Under the 'Bot' directory, application of intelligent chat bot build ontop of C# / ASP.NET using Microsoft's Cognitive Serive and Bot Framework can be found. Personally launched and developed bot. Purpose is to enhance user experience and searches.
