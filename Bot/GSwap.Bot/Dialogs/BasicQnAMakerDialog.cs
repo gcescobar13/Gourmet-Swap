@@ -1283,29 +1283,7 @@ namespace Microsoft.Bot.Sample.QnABot
 
 
 
-    public static class IBotDataBagExt
-    {
-        public static void Replace(this IBotDataBag botBag, string key, object val)
-        {
-            if (botBag.ContainsKey(key))
-            {
-                botBag.RemoveValue(key);
-            }
-            botBag.SetValue(key, val);
-        }
-    }
-
-    //move this else where.
-    //like a c# gulp, all the partial class BasicQnAMakerDialog will me gulped together
-    //will have access to protected methods like example above
-    //this should be in a folder called 'BasicQnAMakerDialog' which will contain all my partial classes of BasicQnAMakerDialog
-
-    public partial class BasicQnAMakerDialog
-    {
-
-        protected int MyProperty { get; set; }
-
-    }
+    
 
 }
 
