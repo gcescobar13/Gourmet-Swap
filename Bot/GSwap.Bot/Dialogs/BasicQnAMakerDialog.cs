@@ -124,25 +124,7 @@ namespace Microsoft.Bot.Sample.QnABot
             context.Wait(MessageReceived);
         }
 
-        [LuisIntent("bootcamp")]
-        public async Task Bootcamp(IDialogContext context, LuisResult result)
-        {
-            string message = $"Don't you know?! Gregorio's favorite boot camp is Code Smith :)";
-
-            await context.PostAsync(message);
-            IMessageActivity resultMessage = context.MakeMessage();
-
-            resultMessage.Attachments.Add(new Attachment()
-            {
-                ContentUrl = "https://d3c5s1hmka2e2b.cloudfront.net/uploads/topic/image/438/codesmith_logo.png",
-                ContentType = "image/png",
-                Name = "Bender_Rodriguez.png"
-            });
-
-            await context.PostAsync(resultMessage);
-
-            context.Wait(MessageReceived);
-        }
+        
         [LuisIntent("search cuisines")]
         public async Task SearchCuisines(IDialogContext context, LuisResult result)
         {
