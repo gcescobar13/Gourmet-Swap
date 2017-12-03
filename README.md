@@ -1,5 +1,5 @@
 # Full Stack .NET Developer
-Personal contributions to Gourmet Swap, a social market built off the idea connecting communities to home-cooked meals prepared by local Chefs. Example codes include the following technologies: C# / ASP.NET MVC, REST Web API, Angular, Javascript, HTML5, Bootstrap 3.0, CSS3.
+Personal contributions to Gourmet Swap, a social market built off the idea connecting communities to home-cooked meals prepared by local Chefs. Example codes include the following technologies: C# / ASP.NET MVC, REST Web API, ADO.NET, SQL Server, Angular, Javascript, HTML5, Bootstrap 3.0, CSS3.
 
 Web Application:
 1) is a Single Page Application (SPA) - using ASP.NET Web API and AngularJS.
@@ -10,5 +10,7 @@ Web Application:
 6) uses ASP.NET Web API and ADO.NET to create REST based services (Web APIs) 
 7) uses AngularJS Controllers / Services to request data from the Web APIs to serve data to AngularJS Views 
 
+
+#### 'C-Sharp' directory
 
 Under the 'Bot' directory, application of intelligent chat bot build ontop of C# / ASP.NET using Microsoft's Cognitive Serives and Bot Framework can be found. Personally launched and developed bot. Purpose of bot is to enhance user experience and meal searches.
