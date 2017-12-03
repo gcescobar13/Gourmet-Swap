@@ -11,6 +11,16 @@ Web Application:
 7) uses AngularJS Controllers / Services to request data from the Web APIs to serve data to AngularJS Views 
 
 
-#### 'C-Sharp' directory
+##### 'C-Sharp' directory:
+1) Models - Domain, Requests, Responses
+2) Api Controllers - Web Api methods
+3) Services - ADO.NET
+4) Interfaces 
+
+##### 'Javascript-Angular' directory:
+1) AngularJS Views
+2) AngularJS Controllers
+3) AngularJS Services
+4) AngularJS Directives
 
 Under the 'Bot' directory, application of intelligent chat bot build ontop of C# / ASP.NET using Microsoft's Cognitive Serives and Bot Framework can be found. Personally launched and developed bot. Purpose of bot is to enhance user experience and meal searches.
