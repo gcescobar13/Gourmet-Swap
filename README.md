@@ -24,5 +24,5 @@ Personal contributions to Gourmet Swap, a social market built off the idea conne
 4) AngularJS Directives
 
 #### 'Bot' directory:
-Personally launched and developed intelligent chat bot build ontop of C# / ASP.NET using Microsoft's Cognitive Serives and Bot Framework to enhance users experience and meal searches.
+Personally launched and developed intelligent chat bot ontop of C# / ASP.NET using Microsoft's Cognitive Serives and Bot Framework to enhance users experience and meal searches.
 
