@@ -7,7 +7,7 @@ Personal contributions to Gourmet Swap, a social market built off the idea conne
 3) follows John Popa's AngularJS style guide for syntax and application structure.
 4) client and server side follows the MVC architectural pattern - using AngularJS and ASP.NET.
 5) server side enforces the dependency injection (DI) design pattern to promote a loosely coupled application. Unity container used to resolve dependencies. 
-6) uses ASP.NET Web API and ADO.NET to create REST based services (Web APIs) 
+6) uses ASP.NET Web API and ADO.NET to create REST web services (Web APIs) 
 7) uses AngularJS Controllers / Services to request data from the Web APIs to serve data to AngularJS Views 
 
 
